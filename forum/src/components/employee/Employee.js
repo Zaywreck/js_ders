@@ -10,7 +10,7 @@ export default function Employee({employee, handleRemove, setSelectedEmployee}) 
     <div key={employee.id}>
         {employee.firstName} {employee.lastName}
         <button onClick={() => handleRemove(employee.id)}>Remove</button>
-        <button onClick={() => handleSelectedEmployee(employee.id)}>Select</button>
+        <button onClick={() => handleSelectedEmployee(employee)}>Select</button>
     </div>
   )
 }

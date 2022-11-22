@@ -1,7 +1,7 @@
 import React from 'react'
+import { data } from '../../data/data';
 
 export default function EmployeeUpdate({
-    employees,
     setList,
     selectedEmployee,
     setSelectedEmployee,
@@ -17,7 +17,7 @@ export default function EmployeeUpdate({
     const handleSubmit = (e) => {
         e.preventDefault();
         setList([
-            employees.filter(emp => emp.id!== selectedEmployee.id),
+            ...data.filter(emp => emp.id!== selectedEmployee.id),
             selectedEmployee
         ])
     }

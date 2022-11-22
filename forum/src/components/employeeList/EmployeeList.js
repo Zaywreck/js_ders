@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../../Context/AppContext'
 import Employee from '../employee/Employee'
 
 
-export default function EmployeeList({ employees, setList, setSelectedEmployee }) {
+export default function EmployeeList({setSelectedEmployee }) {
+
+    const {employees,setList} = useContext(AppContext);
 
     const handleClearAll = () => {
         setList([])

@@ -2,11 +2,10 @@ import { useState } from "react";
 import EmployeeAdd from "./components/employeeAdd/EmployeeAdd";
 import EmployeeList from "./components/employeeList/EmployeeList";
 import EmployeeUpdate from "./components/employeeUpdate/EmployeeUpdate";
-import { employees } from "./data/data"
 
 function App() {
 
-  const [list, setList] = useState(employees);
+  const [list, setList] = useState();
   const [selectedEmployee, setSelectedEmployee] = useState({
     id: 0,
     firstName: '',
